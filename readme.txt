@@ -1,10 +1,10 @@
 === Comments Like Dislike ===
-Contributors: Happy Coders, Regan Khadgi
+Contributors: Happy Coders, regankhadgi
 Donate link: http://wphappycoders.com/
 Tags: comments, comment, rating, like, dislike
 Requires at least: 5.5
-Tested up to: 6.1
-Stable tag: 1.1.8
+Tested up to: 6.2
+Stable tag: 1.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,12 @@ Our plugin uses comment_text filter to append like and dislike icons . So if you
 = Is there any hooks available to extend the plugin ? = 
 Our plugin does contains many actions and filters which are described inside the Help Section
 
+= Is there a way to disable fontawesome and use my own icon? = 
+Yes you can disable the fontawesome from loading as well enabling "Disable Font Awesome" option in the display settings. And also we have the option to upload the custom icons where you can upload and use your own icon
+
+= Can I undo like or dislike action =
+Yes you can undo like or dislike by simply clicking again the same icon. You can also choose a color for already liked or disliked icon
+
 
 == Screenshots ==
 
@@ -77,6 +83,10 @@ Our plugin does contains many actions and filters which are described inside the
 7. Like Dislike Design Settings
 
 == Changelog ==
+= 1.1.9 = 
+* Added Like Dislike Undo feature
+* Added already liked font color option
+
 = 1.1.8 = 
 * Fixed few undefined index issues
 * Added fontawesome disable option in the design settings
