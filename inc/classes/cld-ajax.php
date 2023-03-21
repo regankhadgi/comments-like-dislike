@@ -17,6 +17,7 @@ if (!class_exists('CLD_Ajax')) {
                 $comment_id = sanitize_text_field($_POST['comment_id']);
                 /**
                  * Action cld_before_ajax_process
+                 * Fires just before the ajax process
                  *
                  * @param type int $comment_id
                  *
@@ -165,6 +166,7 @@ if (!class_exists('CLD_Ajax')) {
                 $comment_id = sanitize_text_field($_POST['comment_id']);
                 /**
                  * Action cld_before_undo_ajax_process
+                 * Fires just before the undo ajax process
                  *
                  * @param type int $comment_id
                  *
@@ -295,13 +297,14 @@ if (!class_exists('CLD_Ajax')) {
                     }
                 }
                 /**
-                 * Action cld_after_ajax_process
+                 * Action cld_after_undo_ajax_process
+                 * Fires just after the undo ajax process
                  *
                  * @param type int $comment_id
                  *
-                 * @since 1.0.7
+                 * @since 1.1.9
                  */
-                do_action('cld_after_ajax_process', $comment_id);
+                do_action('cld_after_undo_ajax_process', $comment_id);
                 echo json_encode($response_array);
 
                 //$this->print_array( $response_array );

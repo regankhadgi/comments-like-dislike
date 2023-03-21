@@ -1,51 +1,51 @@
 <div class="cld-settings-section" data-settings-ref="help" style="display:none">
-    <h3><?php _e('Status', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to enable or disable like dislike in the frontend comments.', CLD_TD); ?></p>
+        <h3><?php _e('Status', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to enable or disable like dislike in the frontend comments.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Like Dislike Position', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to control whether like dislike should be shown before.', CLD_TD); ?></p>
+        <h3><?php _e('Like Dislike Position', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to control whether like dislike should be shown before.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Like Dislike Display', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to control whether like or dislike or both should be shown.', CLD_TD); ?></p>
+        <h3><?php _e('Like Dislike Display', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to control whether like or dislike or both should be shown.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Like Dislike Restriction', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to prevent liking or disliking same comments from same liker or disliker through Cookie or IP.', CLD_TD); ?></p>
+        <h3><?php _e('Like Dislike Restriction', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to prevent liking or disliking same comments from same liker or disliker through Cookie or IP.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Like Dislike Display Order', CLD_TD); ?></h3>
-    <p><?php _e('This can be used control the display order of like and dislike.', CLD_TD); ?></p>
+        <h3><?php _e('Like Dislike Display Order', CLD_TD); ?></h3>
+        <p><?php _e('This can be used control the display order of like and dislike.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Like Dislike Templates', CLD_TD); ?></h3>
-    <p><?php _e('There are altogether 5 templates including a custom template. Custom templates can be used to customize the like and dislike display by uploading your own icons.', CLD_TD); ?></p>
+        <h3><?php _e('Like Dislike Templates', CLD_TD); ?></h3>
+        <p><?php _e('There are altogether 5 templates including a custom template. Custom templates can be used to customize the like and dislike display by uploading your own icons.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Icon Color', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to override the color of icon provided by your active theme.', CLD_TD); ?></p>
+        <h3><?php _e('Icon Color', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to override the color of icon provided by your active theme.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Count Color', CLD_TD); ?></h3>
-    <p><?php _e('This can be used to override the color of count provided by your active theme.', CLD_TD); ?></p>
+        <h3><?php _e('Count Color', CLD_TD); ?></h3>
+        <p><?php _e('This can be used to override the color of count provided by your active theme.', CLD_TD); ?></p>
 
-    <div class="cld-separator"></div>
-    <h3><?php _e('Custom Function', CLD_TD); ?></h3>
-    <pre>&lt;?php comments_like_dislike($comment_id);?&gt;</pre>
-    <p class="description">$comment_id is the ID of the comment for which you want to display like dislike buttons.</p>
-    <div class="cld-separator"></div>
-    <h3><?php _e('Available Filters', CLD_TD); ?></h3>
-    <div class="cld-fixed-height">
+        <div class="cld-separator"></div>
+        <h3><?php _e('Custom Function', CLD_TD); ?></h3>
+        <pre>&lt;?php comments_like_dislike($comment_id);?&gt;</pre>
+        <p class="description">$comment_id is the ID of the comment for which you want to display like dislike buttons.</p>
+        <div class="cld-separator"></div>
+        <h3><?php _e('Available Filters', CLD_TD); ?></h3>
+        <div class="cld-fixed-height">
 
-        <pre>
+                <pre>
 /**
  * Filters the tabs
  *
@@ -56,7 +56,7 @@
 $cld_tabs = apply_filters( 'cld_admin_tabs', $cld_tabs );
         </pre>
 
-        <pre>
+                <pre>
 /**
  * Filters total number or templates
  *
@@ -66,7 +66,7 @@ $cld_tabs = apply_filters( 'cld_admin_tabs', $cld_tabs );
  */
 $cld_total_templates = apply_filters( 'cld_total_templates', 4 );
         </pre>
-        <pre>
+                <pre>
 /**
  * Filters the array stored in the database
  *
@@ -76,7 +76,7 @@ $cld_total_templates = apply_filters( 'cld_total_templates', 4 );
  */
 update_option( 'cld_settings', apply_filters( 'cld_settings', $cld_settings ) );
         </pre>
-        <pre>
+                <pre>
 /**
 * Filters Like Dislike HTML
 *
@@ -87,7 +87,7 @@ update_option( 'cld_settings', apply_filters( 'cld_settings', $cld_settings ) );
 */
 $comment_text .= apply_filters( 'cld_like_dislike_html', $like_dislike_html, $cld_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Filters deault settings
  *
@@ -97,7 +97,7 @@ $comment_text .= apply_filters( 'cld_like_dislike_html', $like_dislike_html, $cl
  */
 return apply_filters( 'cld_default_settings', $default_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Filters like count
  *
@@ -108,7 +108,7 @@ return apply_filters( 'cld_default_settings', $default_settings );
  */
 $like_count = apply_filters( 'cld_like_count', $like_count, $comment_id );
         </pre>
-        <pre>
+                <pre>
 /**
  * Filters dislike count
  *
@@ -119,7 +119,7 @@ $like_count = apply_filters( 'cld_like_count', $like_count, $comment_id );
  */
 $dislike_count = apply_filters( 'cld_dislike_count', $dislike_count, $comment_id );
         </pre>
-        <pre>
+                <pre>
 /**
  * Filters the fontawesome file being enqueued
  *
@@ -128,12 +128,12 @@ $dislike_count = apply_filters( 'cld_dislike_count', $dislike_count, $comment_id
  */
 $fontawesome_url = apply_filters( 'cld_fontawesome_url', $fontawesome_url );
         </pre>
-    </div>
-    <div class="cld-separator"></div>
+        </div>
+        <div class="cld-separator"></div>
 
-    <h3><?php _e('Available Actions', CLD_TD); ?></h3>
-    <div class="cld-fixed-height">
-        <pre>
+        <h3><?php _e('Available Actions', CLD_TD); ?></h3>
+        <div class="cld-fixed-height">
+                <pre>
 /**
  * Fires before storing the settings array into database
  *
@@ -144,7 +144,7 @@ $fontawesome_url = apply_filters( 'cld_fontawesome_url', $fontawesome_url );
  */
  do_action( 'cld_before_save_settings', $settings_data, $cld_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires while generating the like dislike html
  *
@@ -155,7 +155,7 @@ $fontawesome_url = apply_filters( 'cld_fontawesome_url', $fontawesome_url );
  */
 do_action( 'cld_like_dislike_output', $comment_text, $comment );
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires when Init hook is fired through plugin
  *
@@ -163,7 +163,7 @@ do_action( 'cld_like_dislike_output', $comment_text, $comment );
  */
 do_action('cld_init');
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires on backend template preview* Fires on backend template preview
  *
@@ -176,7 +176,7 @@ do_action('cld_init');
  */
 do_action( 'cld_template_previews' );
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires when displaying the tabs section
  *
@@ -186,7 +186,7 @@ do_action( 'cld_template_previews' );
  */
 do_action( 'cld_admin_tab_section', $cld_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires when template is being loaded
  *
@@ -196,7 +196,7 @@ do_action( 'cld_admin_tab_section', $cld_settings );
  */
 do_action( 'cld_dislike_template', $cld_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Fires when template is being loaded
  *
@@ -206,7 +206,7 @@ do_action( 'cld_dislike_template', $cld_settings );
  */
 do_action( 'cld_like_template', $cld_settings );
         </pre>
-        <pre>
+                <pre>
 /**
  * Action cld_before_ajax_process
  *
@@ -218,7 +218,7 @@ do_action( 'cld_like_template', $cld_settings );
  */
  do_action( 'cld_before_ajax_process', $comment_id );
         </pre>
-        <pre>
+                <pre>
 /**
  * Action cld_after_ajax_process
  *
@@ -230,5 +230,27 @@ do_action( 'cld_like_template', $cld_settings );
  */
 do_action( 'cld_after_ajax_process', $comment_id );
         </pre>
-    </div>
+                <pre>
+/**
+* Action cld_before_undo_ajax_process
+* Fires just before the undo ajax process
+*
+* @param type int $comment_id
+*
+* @since 1.1.9
+*/
+do_action('cld_before_undo_ajax_process', $comment_id);
+</pre>
+                <pre>
+/**
+* Action cld_after_undo_ajax_process
+* Fires just after the undo ajax process
+*
+* @param type int $comment_id
+*
+* @since 1.1.9
+*/
+do_action('cld_after_undo_ajax_process', $comment_id);
+        </pre>
+        </div>
 </div>
