@@ -5,7 +5,7 @@ defined('ABSPATH') or die('No script kiddies please');
 /*
   Plugin Name: Comments Like Dislike
   Description: A simple plugin to add like dislike for your comments
-  Version:     1.1.9
+  Version:     1.2.0
   Author:      WP Happy Coders
   Author URI:  http://wphappycoders.com
   License:     GPL2

@@ -97,9 +97,13 @@ if (!class_exists('CLD_Admin')) {
         }
 
         function restore_settings() {
-            $default_settings = $this->get_default_settings();
-            update_option('cld_settings', $default_settings);
-            die(__('Settings restored successfully.Redirecting...', CLD_TD));
+            if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'cld-backend-ajax-nonce')) {
+                $default_settings = $this->get_default_settings();
+                update_option('cld_settings', $default_settings);
+                die(__('Settings restored successfully.Redirecting...', CLD_TD));
+            } else {
+                die('No script kiddies please!!');
+            }
         }
 
         /**
@@ -171,7 +175,6 @@ if (!class_exists('CLD_Admin')) {
                 return $comment_id;
             }
         }
-
     }
 
     new CLD_Admin();
