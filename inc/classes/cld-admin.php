@@ -62,7 +62,7 @@ if (!class_exists('CLD_Admin')) {
         }
 
         function save_settings() {
-            if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'cld-backend-ajax-nonce')) {
+            if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'cld-backend-ajax-nonce') && current_user_can('manage_options')) {
                 $_POST = stripslashes_deep($_POST);
                 parse_str($_POST['settings_data'], $settings_data);
                 foreach ($settings_data['cld_settings'] as $key => $val) {
@@ -97,7 +97,7 @@ if (!class_exists('CLD_Admin')) {
         }
 
         function restore_settings() {
-            if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'cld-backend-ajax-nonce')) {
+            if (isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'cld-backend-ajax-nonce') && current_user_can('manage_options')) {
                 $default_settings = $this->get_default_settings();
                 update_option('cld_settings', $default_settings);
                 die(__('Settings restored successfully.Redirecting...', CLD_TD));

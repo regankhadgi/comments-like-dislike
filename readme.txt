@@ -4,7 +4,7 @@ Donate link: http://wphappycoders.com/
 Tags: comments, comment, rating, like, dislike
 Requires at least: 5.5
 Tested up to: 6.3
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,9 @@ Yes you can undo like or dislike by simply clicking again the same icon. You can
 7. Like Dislike Design Settings
 
 == Changelog ==
+= 1.2.1 = 
+* Fixed security issue 
+
 = 1.2.0 = 
 * Fixed security issue
 
