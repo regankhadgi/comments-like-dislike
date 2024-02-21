@@ -83,6 +83,9 @@ Yes you can undo like or dislike by simply clicking again the same icon. You can
 7. Like Dislike Design Settings
 
 == Changelog ==
+= 1.2.2 = 
+* Fixed a security issue
+
 = 1.2.1 = 
 * Fixed security issue 
 
